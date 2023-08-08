@@ -24,7 +24,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px;
+    padding: 80px 0px;
 }
 .flex-container{
     display: flex;
@@ -53,8 +53,30 @@ button:active{
     background-color: #999;
 }
 .border{
-    border: 2px solid #555;
+    border: 8px solid #555;
     border-radius: 5px;
+}
+.input-group{
+    background-color: #222;
+    color: white;
+    padding: 20px 10px;
+    text-align: right;
+}
+.input-group input{
+    text-align: right;
+    background-color: #444;
+    color: white;
+    box-shadow: none;
+    border: 2px solid #444;
+    line-height: 1.6em;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 24px;
+}
+.input-group p{
+    line-height: 1.6em;
+    padding: 2px 5px;
+    font-size: 14px;
 }
 footer{
     height: 100px;
