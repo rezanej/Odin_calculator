@@ -34,3 +34,18 @@ function operate(num1,num2,operator)
         return multiply(num1,num2);
     }
 }
+function buttonPressed(button)
+{
+   const value=button.getAttribute('value');
+}
+function addEvents()
+{
+    let buttons=document.querySelectorAll('.button');
+    buttons.forEach((button)=>
+        {
+            button.addEventListener('click',()=>buttonPressed(button))
+        }
+    )
+}
+
+addEvents()
