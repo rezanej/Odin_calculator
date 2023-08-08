@@ -32,6 +32,7 @@ header{
 }
 .flex-row{
     display: flex;
+    flex: 1;
 }
 .button{
     padding: 8px 24px;
@@ -44,7 +45,7 @@ header{
     border: 2px solid #555;
 }
 .button-wide{
-    flex: 1;
+    flex: 2;
 }
 button:hover{
     background-color: #666;
