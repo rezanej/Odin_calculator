@@ -8,6 +8,10 @@ body ,html{
     height: 100%;
     width: 100%;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 header ,footer{
     background-color: black;
     color: white;
@@ -22,11 +26,42 @@ header{
     align-items: center;
     padding: 80px;
 }
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+}
+.button{
+    padding: 8px 24px;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #555;
+}
+.button-wide{
+    flex: 1;
+}
+button:hover{
+    background-color: #666;
+}
+button:active{
+    background-color: #999;
+}
+.border{
+    border: 2px solid #555;
+    border-radius: 5px;
+}
 footer{
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
 .container{
     width: 80%;
