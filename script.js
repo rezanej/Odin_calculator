@@ -36,9 +36,8 @@ function operate(num1,num2,operator)
         return multiply(num1,num2);
     }
 }
-function buttonPressed(button)
+function buttonPressed(value)
 {
-   const value=button.getAttribute('value');
    const input=document.querySelector('.input-group input');
    const p=document.querySelector(".input-group p");
 
@@ -115,7 +114,7 @@ function buttonPressed(button)
 
            }
            break;
-       case 'equal':
+       case '=':
            if(operator!=='' && input.value!=='')
            {
                operand1=input.value;
@@ -145,9 +144,28 @@ function addEvents()
     let buttons=document.querySelectorAll('.button');
     buttons.forEach((button)=>
         {
-            button.addEventListener('click',()=>buttonPressed(button))
+            button.addEventListener('click',()=>buttonPressed(button.getAttribute('value')))
         }
     )
 }
 
 addEvents()
+
+document.addEventListener('keydown',(event)=>{
+    if (event.key=='Enter') {
+        event.preventDefault();
+        buttonPressed('=')
+    }else if (event.key=='Backspace') {
+        event.preventDefault();
+        buttonPressed('backspace')
+    }else if (event.key=='/') {
+        event.preventDefault();
+        buttonPressed('/')
+    }
+    else if (event.key==' ') {
+        event.preventDefault();
+    }
+    else
+        buttonPressed(event.key);
+
+})
